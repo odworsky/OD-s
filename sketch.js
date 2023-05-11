@@ -83,6 +83,11 @@ function start(){
     }
     ppl(pAge, pDrug)
     infoBox(5, 5, pAge, getPRarity(), pDrug)
+    textSize(20)
+    textAlign(CENTER)
+    fill('white')
+    text('This data was gathered from 2012 to 2018 blah blah', windowWidth/2, windowHeight*3/2)
+    textAlign(CORNER)
     drugKey()
 }
 
