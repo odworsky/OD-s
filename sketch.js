@@ -310,7 +310,14 @@ function keyPressed() {
         console.log(localStorage)
     }
     else if(key == 'o'){
-        seeFav = true
+        if(!localStorage.getItem('size')){
+            textAlign(CENTER)
+            textSize(20)
+            text('You have no druggie stored', windowWidth/2, windowHeight/2)
+            textAlign(CORNER)
+        } else{
+            seeFav = true
+        }
     }
     else if (key == 'm'){
         started = false
