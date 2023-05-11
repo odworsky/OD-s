@@ -11,23 +11,24 @@ class Person {
         for(let d = 1; d<this.drug.length; d++){
             let p = this.percent[d]
             for(let i = 0; i<round(p); i++){
+                if(this.drug[d] == 'AnyOpioid'){
+                    this.drug[d] = 'Opioid'
+                }
+                if(this.drug[d] == 'Tramad'){
+                    this.drug[d] = 'Tramadol'
+                }
+                if(this.drug[d] == 'Amphet'){
+                    this.drug[d] = 'Amphetamine'
+                }
                 this.drugs.push(this.drug[d])
             }
         }
     }
 
     getDrug(){
-        let d = round(random(0, this.drugs.length-1))
-        if(this.drugs[d] == 'AnyOpioid'){
-            this.drugs[d] = 'Opioid'
-        }
-        if(this.drugs[d] == 'Tramad'){
-            this.drugs[d] = 'Tramadol'
-        }
-        if(this.drugs[d] == 'Amphet'){
-            this.drugs[d] = 'Amphetamine'
-        }
+        let d = round(random(0, this.drugs.length))
         return this.drugs[d]
     }
+
     
 }
